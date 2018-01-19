@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
+            <ion-select [(ngModel)]="language" (ionChange)="changeLanguage()">
+                <ion-option *ngFor="let l of languages" [value]="l">{{l}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>{{ 'SETTINGS_OPTION2' | translate }}</ion-label>
+            <ion-select [(ngModel)]="currency" (ionChange)="changeCurrency()">
+                <ion-option *ngFor="let c of currencies" [value]="c">{{c}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+    </ion-list>
+
+
+</ion-content>

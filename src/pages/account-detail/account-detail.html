@@ -1,0 +1,17 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{account.name}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="account-profile" text-center #profilePic [style.background-image]="'url(' + account.logo + ')'">
+    </div>
+
+    <div class="account-detail" padding>
+        <p>Created on {{account.created}}</p>
+    </div>
+</ion-content>
